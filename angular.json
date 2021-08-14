@@ -37,6 +37,37 @@
         }
       }
     },
+    "javascript-skills": {
+      "projectType": "library",
+      "root": "projects/javascript-skills",
+      "sourceRoot": "projects/javascript-skills/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/javascript-skills/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/javascript-skills/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/javascript-skills/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/javascript-skills/src/test.ts",
+            "tsConfig": "projects/javascript-skills/tsconfig.spec.json",
+            "karmaConfig": "projects/javascript-skills/karma.conf.js"
+          }
+        }
+      }
+    },
     "webPageTest": {
       "projectType": "application",
       "schematics": {
@@ -139,38 +170,7 @@
           }
         }
       }
-    },
-    "javascript-skills": {
-      "projectType": "library",
-      "root": "projects/javascript-skills",
-      "sourceRoot": "projects/javascript-skills/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/javascript-skills/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/javascript-skills/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/javascript-skills/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/javascript-skills/src/test.ts",
-            "tsConfig": "projects/javascript-skills/tsconfig.spec.json",
-            "karmaConfig": "projects/javascript-skills/karma.conf.js"
-          }
-        }
-      }
     }
   },
-  "defaultProject": "web-page-test"
+  "defaultProject": "webPageTest"
 }

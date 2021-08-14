@@ -2,7 +2,9 @@
   "name": "personal-blog",
   "version": "0.0.0",
   "scripts": {
-    "preinstall": "npm run build",
+    "preinstall": "npm run unpub:js && npm run unpub:java",
+    "install": "npm run pub:js && npm run pub:java",
+    "postinstall": "npm run install",
     "start": "ng serve",
     "build": "npm run build:js && npm run build:java",
     "watch": "ng build --watch --configuration development",
@@ -13,7 +15,9 @@
     "build:java": "ng build java-skills",
     "pub:java": "npm run build:java && cd dist/java-skills && npm publish",
     "unpub:java": "npm run build:java && cd dist/java-skills && npm unpublish java-skills --force",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "scully": "npx scully --",
+    "scully:serve": "npx scully serve --"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +31,9 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@scullyio/init": "^1.1.4",
+    "@scullyio/ng-lib": "^1.0.0",
+    "@scullyio/scully": "^1.0.0",
     "remove-node-modules": "^1.7.6",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
