@@ -8,6 +8,16 @@
     "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "java-skills": [
+        "dist/java-skills/java-skills",
+        "dist/java-skills"
+      ],
+      "javascript-skills": [
+        "dist/javascript-skills/javascript-skills",
+        "dist/javascript-skills"
+      ]
+    },
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
