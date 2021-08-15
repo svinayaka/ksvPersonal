@@ -11,10 +11,10 @@
     "test": "ng test",
     "build:js": "ng build javascript-skills",
     "pub:js": "npm run build:js && cd dist/javascript-skills && npm publish",
-    "unpub:js": "npm run build:js && cd dist/javascript-skills && npm unpublish javascript-skills --force",
+    "unpub:js": "npm run build:js && cd dist/javascript-skills && npm unpublish javascript-skills@0.0.1",
     "build:java": "ng build java-skills",
     "pub:java": "npm run build:java && cd dist/java-skills && npm publish",
-    "unpub:java": "npm run build:java && cd dist/java-skills && npm unpublish java-skills --force",
+    "unpub:java": "npm run build:java && cd dist/java-skills && npm unpublish java-skills@0.0.1",
     "lint": "ng lint",
     "scully": "npx scully --",
     "scully:serve": "npx scully serve --"

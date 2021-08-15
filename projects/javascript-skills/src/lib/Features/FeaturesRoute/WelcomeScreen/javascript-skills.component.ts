@@ -2,19 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'lib-javascript-skills',
-  template: `
-    <p>
-      javascript-skills works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './js-welcome.component.html',
 })
 export class JavascriptSkillsComponent implements OnInit {
+  webPageTitle: string = 'Welcome to JavaScript';
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

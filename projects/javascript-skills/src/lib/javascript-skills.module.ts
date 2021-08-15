@@ -1,16 +1,7 @@
 import { NgModule } from '@angular/core';
-import { JavascriptSkillsComponent } from './javascript-skills.component';
-
-
-
+import { JSRoutingModule } from './Features/FeaturesRoute/js-router';
 @NgModule({
-  declarations: [
-    JavascriptSkillsComponent
-  ],
-  imports: [
-  ],
-  exports: [
-    JavascriptSkillsComponent
-  ]
+  imports: [JSRoutingModule],
+  exports: [JSRoutingModule],
 })
-export class JavascriptSkillsModule { }
+export class JavascriptSkillsModule {}
